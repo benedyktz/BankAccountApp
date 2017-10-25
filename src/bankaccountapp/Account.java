@@ -19,7 +19,6 @@ public abstract class Account implements IBaseRate {
 		this.name = name;
 		this.socialSecurityNumber = socialSecurityNumber;
 		this.balance = initDeposit;
-		System.out.println(name + " " + socialSecurityNumber + " " + initDeposit);
 		
 		setAccountNumber();
 		
@@ -39,6 +38,10 @@ public abstract class Account implements IBaseRate {
 			randomThreeDigits += randomDigit;
 		}
 		return randomThreeDigits;
+	}
+	
+	public void showInfo() {
+		System.out.println(name + " " + accountNumber + " $" + balance);
 	}
 	
 	//list common methods

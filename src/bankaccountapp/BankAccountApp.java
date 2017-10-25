@@ -9,6 +9,9 @@ public class BankAccountApp {
 		
 		SavingsAccount savingsAccount1 = new SavingsAccount("cc dd", "87654321", 2000);
 		
+		savingsAccount1.showInfo();
+		checkingAccount1.showInfo();
+		
 		// Read a csv file and create accounts based on that data
 
 	}
