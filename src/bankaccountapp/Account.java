@@ -8,7 +8,7 @@ public abstract class Account implements IBaseRate {
 	
 	private String name;
 	private String socialSecurityNumber;
-	private String accountNumber;
+	protected String accountNumber;
 	private double balance;
 	private double rate;
 	
@@ -23,17 +23,13 @@ public abstract class Account implements IBaseRate {
 		
 		setAccountNumber();
 		
-		
-		
 		uniqueFiveDigitNumber++;
 	}
 	
 	private void setAccountNumber() {
-		String accountNumber = socialSecurityNumber.substring(socialSecurityNumber.length()-2);
+		accountNumber = socialSecurityNumber.substring(socialSecurityNumber.length()-2);
 		accountNumber += uniqueFiveDigitNumber;
 		accountNumber += generateThreeRandomNumber();
-		System.out.println(accountNumber);
-		
 	}
 	
 	private String generateThreeRandomNumber() {
