@@ -1,11 +1,23 @@
 package bankaccountapp;
 
+import java.util.List;
+
+import utilities.CsvReader;
+
 public class BankAccountApp {
 
 	public static void main(String[] args) {
 		
+		String fileName = "NewBankAccounts.csv";
 		
+		List<String[]> newCustomers = CsvReader.read(fileName);
 		
+		for(String[] customer : newCustomers) {
+			System.out.println(customer[0]);
+			System.out.println(customer[1]);
+			System.out.println(customer[2]);
+			System.out.println(customer[3]);
+		}
 		
 //		CheckingAccount checkingAccount1 = new CheckingAccount("aa bb", "12345678", 1500);
 //		
