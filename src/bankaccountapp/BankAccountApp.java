@@ -13,6 +13,14 @@ public class BankAccountApp {
 		System.out.println("***************");
 		checkingAccount1.showInfo();
 		
+		savingsAccount1.deposit(100);
+		savingsAccount1.withdraw(200);
+		savingsAccount1.transfer("aa", 12);
+		
+		checkingAccount1.deposit(10);
+		checkingAccount1.withdraw(100);
+		checkingAccount1.transfer("adasd", 20);
+		
 		// Read a csv file and create accounts based on that data
 
 	}
