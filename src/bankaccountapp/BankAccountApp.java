@@ -1,5 +1,6 @@
 package bankaccountapp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import utilities.CsvReader;
@@ -8,35 +9,34 @@ public class BankAccountApp {
 
 	public static void main(String[] args) {
 		
+		List<Account> accounts = new ArrayList<Account>();
+		
+		
 		String fileName = "NewBankAccounts.csv";
 		
 		List<String[]> newCustomers = CsvReader.read(fileName);
 		
 		for(String[] customer : newCustomers) {
-			System.out.println(customer[0]);
-			System.out.println(customer[1]);
-			System.out.println(customer[2]);
-			System.out.println(customer[3]);
+			String name = customer[0];
+			String socialSecurityNumber = customer[1];
+			String accountType = customer[2];
+			double initDeposit = Double.parseDouble(customer[3]);
+			
+			if(accountType.equals("Savings")) {
+				accounts.add(new SavingsAccount(name, socialSecurityNumber, initDeposit));
+			}
+			else if(accountType.equals("Checking")) {
+				accounts.add(new CheckingAccount(name, socialSecurityNumber, initDeposit));
+			}
+			else {
+				System.out.println("error, wrong account type");
+			}
 		}
 		
-//		CheckingAccount checkingAccount1 = new CheckingAccount("aa bb", "12345678", 1500);
-//		
-//		SavingsAccount savingsAccount1 = new SavingsAccount("cc dd", "87654321", 2000);
-//		
-//		savingsAccount1.showInfo();
-//		System.out.println("***************");
-//		checkingAccount1.showInfo();
-//		
-//		savingsAccount1.deposit(100);
-//		savingsAccount1.withdraw(200);
-//		savingsAccount1.transfer("aa", 12);
-//		
-//		checkingAccount1.deposit(10);
-//		checkingAccount1.withdraw(100);
-//		checkingAccount1.transfer("adasd", 20);
-//		
-//		
-//		savingsAccount1.compound();
+		for(Account acc : accounts) {
+			acc.showInfo();
+			System.out.println("\n");
+		}
 
 	}
 
