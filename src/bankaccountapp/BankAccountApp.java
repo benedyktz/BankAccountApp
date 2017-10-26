@@ -3,7 +3,6 @@ package bankaccountapp;
 public class BankAccountApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		CheckingAccount checkingAccount1 = new CheckingAccount("aa bb", "12345678", 1500);
 		
@@ -23,7 +22,6 @@ public class BankAccountApp {
 		
 		
 		savingsAccount1.compound();
-		// Read a csv file and create accounts based on that data
 
 	}
 

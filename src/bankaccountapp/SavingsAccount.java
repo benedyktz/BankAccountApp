@@ -4,11 +4,9 @@ import javax.print.attribute.SetOfIntegerSyntax;
 
 public class SavingsAccount extends Account {
 	
-	//list properties specific to savings accounts
 	private final int safetyDepositBoxId;
 	private final int safetyDepositBoxKey;
 	
-	//constructor to initialize saving accounts properties
 	public SavingsAccount(String name, String socialSecurityNumber, double initDeposit) {
 		super(name, socialSecurityNumber, initDeposit);
 		accountNumber = "1" + accountNumber;
@@ -20,10 +18,7 @@ public class SavingsAccount extends Account {
 	public void setRate() {
 		rate = 0.15 * getBaseRate();
 	}
-	
-	//list methods specific to savings accounts
 
-	
 	public void showInfo() {
 		System.out.println("savings");
 		super.showInfo();

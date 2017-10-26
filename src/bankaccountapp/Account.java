@@ -3,8 +3,6 @@ package bankaccountapp;
 import java.math.BigDecimal;
 
 public abstract class Account implements IBaseRate {
-	//common properties for savings and checking accounts
-	
 	
 	private String name;
 	private String socialSecurityNumber;
@@ -14,7 +12,6 @@ public abstract class Account implements IBaseRate {
 	
 	private static int uniqueFiveDigitNumber = 10000;
 	
-	//constructor to set base properties
 	public Account(String name, String socialSecurityNumber, double initDeposit) {
 		this.name = name;
 		this.socialSecurityNumber = socialSecurityNumber;
@@ -78,6 +75,4 @@ public abstract class Account implements IBaseRate {
 		System.out.println("Balance is: " + balance);
 	}
 	
-	//list common methods
-
 }
