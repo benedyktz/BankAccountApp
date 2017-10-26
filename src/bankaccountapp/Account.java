@@ -22,6 +22,8 @@ public abstract class Account implements IBaseRate {
 		
 		setAccountNumber();
 		
+		System.out.println(getBaseRate());
+		
 		uniqueFiveDigitNumber++;
 	}
 	
