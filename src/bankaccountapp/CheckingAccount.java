@@ -14,6 +14,11 @@ public class CheckingAccount extends Account {
 		debitCardPin = (int) (Math.random() * Math.pow(10, 4));
 	}
 	
+	@Override
+	public void setRate() {
+		System.out.println("rate for checking");
+	}
+	
 	//list methods specific to checking accounts
 
 	public void showInfo() {

@@ -10,7 +10,7 @@ public abstract class Account implements IBaseRate {
 	private String socialSecurityNumber;
 	protected String accountNumber;
 	private double balance;
-	private double rate;
+	protected double rate;
 	
 	private static int uniqueFiveDigitNumber = 10000;
 	
@@ -24,8 +24,12 @@ public abstract class Account implements IBaseRate {
 		
 		System.out.println(getBaseRate());
 		
+		setRate();
+		
 		uniqueFiveDigitNumber++;
 	}
+	
+	public abstract void setRate();
 	
 	private void setAccountNumber() {
 		accountNumber = socialSecurityNumber.substring(socialSecurityNumber.length()-2);
