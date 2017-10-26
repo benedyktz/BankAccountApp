@@ -37,6 +37,12 @@ public abstract class Account implements IBaseRate {
 		accountNumber += generateThreeRandomNumber();
 	}
 	
+	public void compound() {
+		double accruedInterest = balance * (rate/100);
+		balance = balance + accruedInterest;
+		System.out.println("Accrued interest " + accruedInterest);
+	}
+	
 	protected String generateThreeRandomNumber() {
 		String randomThreeDigits = "";
 		for(int i=0; i<3; i++) {

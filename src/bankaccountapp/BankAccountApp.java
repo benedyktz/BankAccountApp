@@ -21,6 +21,8 @@ public class BankAccountApp {
 		checkingAccount1.withdraw(100);
 		checkingAccount1.transfer("adasd", 20);
 		
+		
+		savingsAccount1.compound();
 		// Read a csv file and create accounts based on that data
 
 	}
