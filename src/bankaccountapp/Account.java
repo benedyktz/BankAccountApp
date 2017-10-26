@@ -31,7 +31,7 @@ public abstract class Account implements IBaseRate {
 		accountNumber += generateThreeRandomNumber();
 	}
 	
-	private String generateThreeRandomNumber() {
+	protected String generateThreeRandomNumber() {
 		String randomThreeDigits = "";
 		for(int i=0; i<3; i++) {
 			int randomDigit = (int) Math.floor((Math.random() * 10));
